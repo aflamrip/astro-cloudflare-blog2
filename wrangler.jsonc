@@ -1,23 +1,24 @@
 {
-	"main": "@astrojs/cloudflare/entrypoints/server",
-	"compatibility_date": "2026-02-13",
-	"compatibility_flags": [
-    "nodejs_compat"
-	"assets": {
-		"directory": "./dist",
-		"binding": "ASSETS",
-	},
-	"d1_databases": [
-		{
-			"binding": "DB",
-			"database_name": "md01",
-			"database_id": "7b646d61-e33e-422f-8ba4-ca3918bf1f6d",
-		},
-	],
-	"kv_namespaces": [
-		{
-			"binding": "KV",
-			"id": "e9b179f0837c4cf0be9c27fdd39c7e95",
-		},
-	],
+  "main": "./.astro/dist/server/entry.mjs", // المسار الافتراضي لـ Astro على Cloudflare
+  "compatibility_date": "2026-02-13",
+  "compatibility_flags": [
+    "nodejs_compat" 
+  ], // تأكد من إضافة الفاصلة وإغلاق القوس المربع هنا
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS"
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "md01",
+      "database_id": "7b646d61-e33e-422f-8ba4-ca3918bf1f6d"
+    }
+  ],
+  "kv_namespaces": [
+    {
+      "binding": "KV",
+      "id": "e9b179f0837c4cf0be9c27fdd39c7e95"
+    }
+  ]
 }
