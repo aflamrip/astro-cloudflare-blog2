@@ -1,13 +1,9 @@
 {
-  "main": "./.astro/dist/server/entry.mjs", // المسار الافتراضي لـ Astro على Cloudflare
   "compatibility_date": "2026-02-13",
   "compatibility_flags": [
-    "nodejs_compat" 
-  ], // تأكد من إضافة الفاصلة وإغلاق القوس المربع هنا
-  "assets": {
-    "directory": "./dist",
-    "binding": "ASSETS"
-  },
+    "nodejs_compat"
+  ],
+  "pages_build_output_dir": "./dist", 
   "d1_databases": [
     {
       "binding": "DB",
