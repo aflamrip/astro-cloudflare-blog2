@@ -10,9 +10,6 @@ export default defineConfig({
 
   adapter: cloudflare({
     imageService: "passthrough",
-    // السطرين التاليين يمنعان Astro من إنتاج ملفات إعدادات خاطئة
-    cloudflareModules: false, 
-    platformProxy: { enabled: true },
   }),
 
   i18n: {
