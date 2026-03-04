@@ -11,6 +11,10 @@ export default defineConfig({
 
   adapter: cloudflare({
     imageService: "passthrough",
+    // أضف السطر التالي لإيقاف توليد ملف wrangler تلقائياً ومنع التعارض
+    platformProxy: {
+      enabled: true,
+    },
   }),
 
   i18n: {
@@ -22,7 +26,6 @@ export default defineConfig({
     build: {
       minify: false,
     },
-
     plugins: [tailwindcss()],
   },
 });
