@@ -3,7 +3,6 @@ import { defineConfig } from "astro/config";
 import cloudflare from "@astrojs/cloudflare";
 import tailwindcss from "@tailwindcss/vite";
 
-// https://astro.build/config
 export default defineConfig({
   site: "https://astro.build",
   base: "/",
@@ -11,10 +10,9 @@ export default defineConfig({
 
   adapter: cloudflare({
     imageService: "passthrough",
-    // أضف السطر التالي لإيقاف توليد ملف wrangler تلقائياً ومنع التعارض
-    platformProxy: {
-      enabled: true,
-    },
+    // السطرين التاليين يمنعان Astro من إنتاج ملفات إعدادات خاطئة
+    cloudflareModules: false, 
+    platformProxy: { enabled: true },
   }),
 
   i18n: {
